@@ -44,17 +44,17 @@ body {
 header {
   background: var(--highlight-color);
   display: block;
-  height: 40px;
+  height: 30px;
   line-height: 40px;
 }
 
 header h1 {
   color: var(--background-color);
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  line-height: 40px;
+  line-height: 30px;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
@@ -62,7 +62,7 @@ header h1 {
 
 header h1 img {
   display: inline-block;
-  height: 20px;
+  height: 18px;
   object-fit: contain;
   vertical-align: text-bottom;
   width: auto;
@@ -78,21 +78,13 @@ header h1 img {
   position: relative;
   width: 100%;
 }
-/*
-.intro::before {
-  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,.25) 100%);
-  bottom: 0;
-  content: '';
-  display: block;
-  height: auto;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: auto;
-  z-index: 1;
+
+@media screen and (min-width:1366px) {
+  .intro {
+    aspect-ratio: auto;
+    height: 90vh;
+  }
 }
-*/
 
 .intro .title {
   display: block;
@@ -123,12 +115,31 @@ header h1 img {
   margin-bottom: 3px;
 }
 
+@media screen and (min-width:768px) {
+  .intro h1 {
+    font-size: 88px;
+    margin-bottom: 6px;
+  }
+}
+
 .intro h2 {
   font-size: 16px;
 }
 
+@media screen and (min-width:768px) {
+  .intro h2 {
+    font-size: 24px;
+  }
+}
+
 .intro h3 {
   font-size: 14px;
+}
+
+@media screen and (min-width:768px) {
+  .intro h3 {
+    font-size: 22px;
+  }
 }
 
 .claim {
@@ -137,8 +148,21 @@ header h1 img {
   text-align: center;
 }
 
+@media screen and (min-width:768px) {
+  .claim {
+    padding: 120px;
+  }
+}
+
 .claim p {
   margin: 0;
+}
+
+@media screen and (min-width:1366px) {
+  .claim p {
+    margin: 0 auto;
+    max-width: 600px;
+  }
 }
 
 .claim-1 {
@@ -148,7 +172,6 @@ header h1 img {
 
 .grid {
   display: flex;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
   margin: 0;
 }
@@ -160,8 +183,26 @@ header h1 img {
   position: relative;
 }
 
+@media screen and (min-width:768px) {
+  .grid-item {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width:1366px) {
+  .grid-item {
+    flex: 0 0 25%;
+  }
+}
+
 .grid-small {
   flex: 0 0 50%;
+}
+
+@media screen and (min-width:1366px) {
+  .grid-small {
+    flex: 0 0 25%;
+  }
 }
 
 .grid-item img {
@@ -185,6 +226,18 @@ header h1 img {
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   width: 50%;
+}
+
+@media screen and (min-width:768px) {
+  .grid-item .compra {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width:1366px) {
+  .grid-item .compra {
+    width: 75%;
+  }
 }
 
 .grid-item .compra p {
@@ -215,6 +268,15 @@ header h1 img {
   text-decoration: none;
   text-transform: uppercase;
   width: auto;
+}
+
+@media screen and (min-width:768px) {
+  .grid-item .compra .button {
+    font-size: 26px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 30px;
+  }
 }
 
 .poster {

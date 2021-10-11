@@ -1,0 +1,101 @@
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'PT Serif', serif;
+*/
+
+:root {
+  --alternate-color-1: #EFDCAC;
+  --alternate-color-2: #EDBFA5;
+  --background-color: #fff;
+  --highlight-color: #FF1111; 
+  --text-color: #000;
+  --title-color: #C10000;
+
+  --sans: 'Oswald', sans-serif;
+  --serif: 'PT Serif', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.wrapper {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1600px;
+  position: relative;
+}
+
+.intro {
+  aspect-ratio: 16 / 9;
+  background:var(--alternate-color-2) url(../img/apertura.png) center center no-repeat;
+  background-blend-mode: lighten;
+  background-size: cover;
+  display: block;
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.intro::before {
+  background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,.75) 100%);
+  bottom: 0;
+  content: '';
+  display: block;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  z-index: 1;
+}
+
+.intro .title {
+  display: block;
+  left: 50%;
+  max-width: 60%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.intro h1,
+.intro h2,
+.intro h3 {
+  color: var(--text-color);
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  color: var(--title-color);
+  font-size: 64px;
+  margin-bottom: 3px;
+}
+
+.intro h2 {
+  font-size: 20px;
+}
+
+.intro h3 {
+  font-size: 16px;
+}

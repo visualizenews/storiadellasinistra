@@ -122,6 +122,13 @@ header h1 img {
   }
 }
 
+@media screen and (min-width:1366px) {
+  .intro h1 {
+    font-size: 152px;
+    margin-bottom: 6px;
+  }
+}
+
 .intro h2 {
   font-size: 16px;
 }
@@ -160,6 +167,7 @@ header h1 img {
 
 @media screen and (min-width:1366px) {
   .claim p {
+    font-size: 24px;
     margin: 0 auto;
     max-width: 600px;
   }

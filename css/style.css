@@ -44,17 +44,17 @@ body {
 header {
   background: var(--highlight-color);
   display: block;
-  height: 40px;
+  height: 30px;
   line-height: 40px;
 }
 
 header h1 {
   color: var(--background-color);
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  line-height: 40px;
+  line-height: 30px;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
@@ -62,7 +62,7 @@ header h1 {
 
 header h1 img {
   display: inline-block;
-  height: 20px;
+  height: 18px;
   object-fit: contain;
   vertical-align: text-bottom;
   width: auto;

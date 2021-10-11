@@ -7,9 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://visualize.news/remotes/footer/footer.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="include" href="https://visualize.news/remotes/footer/corporate_it.html" id="corporate">
+    <link rel="include" href="https://visualize.news/remotes/footer/legal_it.html" id="legal">
   </head>
-  <body>
+  <body class="vn">
     <div class="wrapper">
       <header><h1><img src="./img/logo-plain-w.png" alt="VN Logo" /> Visualize News</h1></header>
       <div class="intro">
@@ -24,7 +27,7 @@
       </div>
       <div class="poster"></div>
       <div class="claim claim-0">
-        <p>Abbiamo provato a sintetizare in un poster, tutta la storia della Sinistra in Italia, dalla fondazione nel 1892 del <em>Partito dei Lavoratori</em> fino alle scissioni di <em>Italia Viva</em> e <em>Azione</em>: una storia piena sorprese e di scelte ai più incomprensibili.</p>
+        <p>Abbiamo provato a sintetizare in un poster tutta la storia della Sinistra in Italia, dalla fondazione nel 1892 del <em>Partito dei Lavoratori</em> fino alle scissioni di <em>Italia Viva</em> e <em>Azione</em>: una storia piena sorprese e di scelte ai più incomprensibili.</p>
         </em></p>
       </div>
       <div class="grid">
@@ -66,9 +69,41 @@
         </em></p>
       </div>
       <div class="grid">
-        <div class="grid-item grid-small"><img src="img/worker-1.png" alt="Artwork" /></div>
-        <div class="grid-item  grid-small"><img src="img/worker-2.png" alt="Artwork" /></div>
+        <div class="grid-item"><img src="img/girl-2-red.jpg" alt="T-Shirt" /></div>
+        <div class="grid-item grid-small"><img src="img/girl-black.jpg" alt="T-Shirt" /></div>
+        <div class="grid-item  grid-small"><img src="img/guy-2-black.jpg" alt="T-Shirt" /></div>
+        <div class="grid-item grid-item-compra">
+          <div class="compra">
+            <p>Vuoi il poster?</p>
+            <p><a href="https://visualizenews.myspreadshop.it/storia+della+sinistra?collection=xSQYWRdBPt" target="_blank" class="button">Compralo Ora</a></p>
+            <p><small>Oppure puoi <a href="" target="_self">scaricarlo gratuitamente in formato PDF</a></small></p>
+          </div>
+        </div>
+        <div class="grid-item  grid-small"><img src="img/guy-yellow.jpg" alt="T-Shirt" /></div>
+        <div class="grid-item grid-small"><img src="img/poster-3-red.jpg" alt="Poster" /></div>
+        <div class="grid-item  grid-small"><img src="img/guy-black.jpg" alt="T-Shirt" /></div>
+        <div class="grid-item  grid-small"><img src="img/poster-2-red.jpg" alt="Poster" /></div>
       </div>
     </div>
+    <footer id="footer" class="footer">
+      <div class="wrapper">
+        <div class="cols">
+          <div class="col legal" id="footer-legal"></div>
+          <div class="col corporate" id="footer-corporate"></div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      fetch(document.querySelector('#corporate').getAttribute('href'))
+        .then(response => response.text())
+        .then(content => {
+          document.querySelector('#footer-corporate').innerHTML =content;
+        });
+      fetch(document.querySelector('#legal').getAttribute('href'))
+        .then(response => response.text())
+        .then(content => {
+          document.querySelector('#footer-legal').innerHTML =content;
+        })
+    </script>
   </body>
 </html>

@@ -21,7 +21,7 @@ font-family: 'PT Serif', serif;
   box-sizing: border-box;
 }
 
-body {
+body.vn {
   background: var(--background-color);
   color: var(--text-color);
   font-family: var(--serif);
@@ -117,14 +117,14 @@ header h1 img {
 
 @media screen and (min-width:768px) {
   .intro h1 {
-    font-size: 88px;
+    font-size: 152px;
     margin-bottom: 6px;
   }
 }
 
 @media screen and (min-width:1366px) {
   .intro h1 {
-    font-size: 152px;
+    font-size: 182px;
     margin-bottom: 6px;
   }
 }
@@ -163,6 +163,12 @@ header h1 img {
 
 .claim p {
   margin: 0;
+}
+
+@media screen and (min-width:768px) {
+  .claim p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width:1366px) {
